@@ -12,7 +12,7 @@ public class PathNode
 
     public PathNode veioDele;
 
-    public bool ehParede ;
+    public bool ehParede;
 
     public int custoDeAndar;
 

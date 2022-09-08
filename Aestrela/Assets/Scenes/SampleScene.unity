@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MazeGenerator
       objectReference: {fileID: 0}
+    - target: {fileID: 2021072602709038554, guid: 602c884cf3b679b4aa8f2a1323c403c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2021072602709038556, guid: 602c884cf3b679b4aa8f2a1323c403c0, type: 3}
       propertyPath: m_RootOrder
       value: 2

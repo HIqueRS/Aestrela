@@ -16,25 +16,25 @@ public class Teste : MonoBehaviour
     public int tamX, tamY;
 
     int[,] maze = new int[19, 22] {
-{ 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-{ 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-{ 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1 },
-{ 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1 },
-{ 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1 },
-{ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1 },
-{ 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-{ 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1 },
-{ 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1 },
-{ 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1 },
-{ 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1 },
-{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1 },
-{ 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1 },
-{ 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1 },
-{ 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1 },
-{ 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1 },
-{ 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1 },
-{ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1 },
-{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1 }
+{ 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//0 XX
+{ 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },//1
+{ 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1 },//2
+{ 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1 },//3X
+{ 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1 },//4
+{ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 1 },//5X
+{ 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 },//6
+{ 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1 },//7
+{ 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1 },//8
+{ 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1 },//9
+{ 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1 },//10
+{ 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1 },//11
+{ 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1 },//12X
+{ 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1 },//13
+{ 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1 },//14
+{ 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1 },//15X
+{ 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1 },//16
+{ 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1 },//17X
+{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1 }//18X
 };
 
     // Start is called before the first frame update
@@ -60,7 +60,7 @@ public class Teste : MonoBehaviour
             {
                 nodos[i, j] = new PathNode();
 
-                if(maze[i,j] == 1)
+                if (maze[i, j] == 1)
                 {
                     nodos[i, j].ehParede = true;
                 }
@@ -103,7 +103,7 @@ public class Teste : MonoBehaviour
 
         bool valido = false;
 
-        if(nodos[x,y].posicao != posicaoFinal)
+        if (nodos[x, y].posicao != posicaoFinal)
         {
             if (x - 1 >= 0) //testando o da esqueda
             {
@@ -114,7 +114,7 @@ public class Teste : MonoBehaviour
                         CalculandoCustos(x - 1, y, x, y);
 
 
-                       // openList.Add(nodos[x - 1, y]);
+                        // openList.Add(nodos[x - 1, y]);
 
                         if (nodos[x - 1, y].totalSoma < custoMaisBaixo.totalSoma)
                         {
@@ -125,7 +125,7 @@ public class Teste : MonoBehaviour
                             valido = true;
 
                         }
-                            
+
                     }
                 }
             }
@@ -147,7 +147,7 @@ public class Teste : MonoBehaviour
 
                             valido = true;
                         }
-                            
+
                     }
                 }
             }
@@ -164,11 +164,11 @@ public class Teste : MonoBehaviour
                         {
                             custoMaisBaixo = nodos[x, y - 1];
                             posMB.x = x;
-                            posMB.y = y-1;
+                            posMB.y = y - 1;
 
                             valido = true;
                         }
-                            
+
                     }
                 }
             }
@@ -186,11 +186,11 @@ public class Teste : MonoBehaviour
                         {
                             custoMaisBaixo = nodos[x, y + 1];
                             posMB.x = x;
-                            posMB.y = y+1;
+                            posMB.y = y + 1;
 
                             valido = true;
                         }
-                            
+
                     }
                 }
             }
@@ -199,10 +199,10 @@ public class Teste : MonoBehaviour
 
             nodos[(int)posMB.x, (int)posMB.y].veioDele = nodos[x, y];
 
-            Debug.Log("indo atras"+ x + " " + y);
+            Debug.Log("indo atras" + x + " " + y);
 
             //if() se o cara nao achou nenhum lugar decente entao ele pega o primeiro da open list
-            if(valido)
+            if (valido)
             {
                 Aestrela((int)custoMaisBaixo.posicao.x, (int)custoMaisBaixo.posicao.y);
             }
@@ -210,21 +210,24 @@ public class Teste : MonoBehaviour
             {
                 Aestrela((int)openList[0].posicao.x, (int)openList[0].posicao.y);
             }
-            
+
         }
-       
+
 
     }
 
-    public void CalculandoCustos(int x1,int y1,int x2,int y2)
+    public void CalculandoCustos(int x1, int y1, int x2, int y2)
     {
-        
+
 
         nodos[x1, y1].posicao = new Vector2(x1, y1);
 
         nodos[x1, y1].quantoAndou += nodos[x2, y2].quantoAndou + nodos[x2, y2].custoDeAndar;
         nodos[x1, y1].distanciaProFim = Vector2.Distance(nodos[x1, y1].posicao, posicaoFinal);//CalcularDistancia(x - 1, y); // x-1 - x final , y - y final vector2.distr(vetor,verto)
         nodos[x1, y1].totalSoma = nodos[x1, y1].quantoAndou + nodos[x1, y1].distanciaProFim;
+
+
+        nodos[x1, y1].veioDele = nodos[x2, y2];
 
         openList.Add(nodos[x1, y1]);
     }
@@ -237,10 +240,12 @@ public class Teste : MonoBehaviour
 
         if (nodos[x, y].veioDele != null)
         {
-           
+
             ShowFinal((int)nodos[x, y].veioDele.posicao.x, (int)nodos[x, y].veioDele.posicao.y);
         }
+
+        //break;
     }
 
-     
+
 }
