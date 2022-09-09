@@ -82,7 +82,20 @@ public class Teste : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            if(pathList.Count > 0)
+            {
+                //pathList.Reverse();
+
+                //Debug.Log(pathList[0].posicao.x);
+                //Debug.Log(pathList[0].posicao.y);
+
+                transform.position = new Vector3(  - 25 + pathList[pathList.Count-1].posicao.y * 3, 0,   25 - pathList[pathList.Count - 1].posicao.x * 3);
+
+                pathList.Remove(pathList[pathList.Count - 1]);
+            }
+        }
     }
 
     public void Aestrela(int x, int y)
@@ -282,6 +295,8 @@ public class Teste : MonoBehaviour
             ShowFinal((int)nodos[x, y].veioDele.posicao.x, (int)nodos[x, y].veioDele.posicao.y);
         }
 
+
+         pathList.Reverse();
         //break;
     }
 
