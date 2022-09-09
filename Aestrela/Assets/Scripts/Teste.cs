@@ -6,6 +6,8 @@ public class Teste : MonoBehaviour
 {
     public PathNode[,] nodos;
 
+    private int counter;
+
     public List<PathNode> closeList;
     public List<PathNode> openList;
     public List<PathNode> pathList;
@@ -40,6 +42,8 @@ public class Teste : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        counter = 0;
+
         pathList = new List<PathNode>();
         closeList = new List<PathNode>();
         openList = new List<PathNode>();
@@ -201,19 +205,51 @@ public class Teste : MonoBehaviour
 
             Debug.Log("indo atras" + x + " " + y);
 
-            //if() se o cara nao achou nenhum lugar decente entao ele pega o primeiro da open list
-            if (valido)
-            {
-                Aestrela((int)custoMaisBaixo.posicao.x, (int)custoMaisBaixo.posicao.y);
-            }
-            else
-            {
-                Aestrela((int)openList[0].posicao.x, (int)openList[0].posicao.y);
-            }
+            counter++;
 
+            Debug.Log("quantas vezes testou:" + counter);
+
+            //if() se o cara nao achou nenhum lugar decente entao ele pega o primeiro da open list
+
+            //aaaah mudar isso tudo pra ficar pica tem q pegar o menor
+
+
+            //if (valido)
+            //{
+            //    Aestrela((int)custoMaisBaixo.posicao.x, (int)custoMaisBaixo.posicao.y);
+            //}
+            //else
+            //{
+
+            //    Aestrela((int)openList[0].posicao.x, (int)openList[0].posicao.y);
+            //}
+
+
+            PathNode oBrabo;
+
+            oBrabo = MenorDosOpen();
+
+            Aestrela((int)oBrabo.posicao.x, (int)oBrabo.posicao.y);
         }
 
 
+    }
+
+    public PathNode MenorDosOpen()
+    {
+        PathNode oBrabo;
+
+        oBrabo = new PathNode();
+
+        foreach (PathNode node in openList)
+        {
+            if(node.totalSoma < oBrabo.totalSoma)
+            {
+                oBrabo = node;
+            }
+        }
+
+        return oBrabo;
     }
 
     public void CalculandoCustos(int x1, int y1, int x2, int y2)
@@ -237,6 +273,8 @@ public class Teste : MonoBehaviour
         pathList.Add(nodos[x, y]);
 
         Debug.Log(x + " " + y);
+
+        
 
         if (nodos[x, y].veioDele != null)
         {
